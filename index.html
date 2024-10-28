@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亗F𝖗۝𝔰𝖙</title>
+    <style>
+        div{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div>Browser-value = <div id="intro"></div></div><br>
+    <div>Expo = <div id="intro2"></div></div>
+    
+    <script>
+        let index = 1;
+        let sec_index = 1;
+
+        function Frst(value){
+            function print() {
+                if (value == 1){
+                    index += 1
+                    console.log('Console-value = ' + index + '\n');
+                }
+
+                else {
+                   sec_index += 1
+                   document.getElementById('intro').innerHTML = index;
+                }
+                
+                if (index == 50) {
+                    clearInterval(interval);
+                }
+
+                if (sec_index == 50) {
+                    clearInterval(sec_interval);
+                }
+            }
+
+            if (value == 1){
+                interval = setInterval(print, 50);
+            }
+
+            else {
+                sec_interval = setInterval(print, 50);
+            }
+            
+        }
+        Frst(1), Frst(0);
+
+        let exponet1 = 5**2;
+        let exponet2 = 5**3;
+        let exponet3 = 5**4;
+        let exponet4 = 5**5;
+        let exponet5 = 5**6;
+
+        console.log('Expo = ', exponet1, exponet2, exponet3, exponet4, exponet5)
+        document.getElementById('intro2').innerHTML = (exponet1, exponet2, exponet3, exponet4, exponet5)
+        </script>
+    
+</body>
+</html>
